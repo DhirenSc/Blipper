@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C32026">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C32026"
+    android:id="@+id/RLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Add a Neighbour"
+            android:id="@+id/label_points"
+            android:textColor="#FFF"
+            android:gravity="center"
+            android:textSize="40dp"></TextView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:textColorLink="#fff"
+            android:layout_height="50dp"
+            android:id="@+id/searchquery"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="#ffffff"
+            android:hint="Enter a username ..."
+            android:maxLines="1"
+            android:gravity="center"
+            android:textColorHint="#fff"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttonbg"
+            android:theme="@style/MyEditTextTheme"/>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:elevation="10dp"
+            android:src="@drawable/ic_search_white_24dp"
+            android:layout_marginTop="10dp"
+            app:backgroundTint="#A4C639"
+            android:onClick="goSearchUser"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="16dp"
+
+
+            />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="#C32026"
+            android:id="@+id/viewDetails"
+            android:visibility="gone"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Neighbour Details"
+                    android:textSize="18dp"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#fff"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:layout_weight="3"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:layout_weight="1"
+                        android:textSize="16dp"
+                        android:id="@+id/d_name"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#fff"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Uname"
+                        android:layout_weight="3"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Username"
+                        android:layout_weight="1"
+                        android:textSize="16dp"
+                        android:id="@+id/d_uname"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#fff"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Flat Number"
+                        android:layout_weight="3"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Flat Number"
+                        android:layout_weight="1"
+                        android:textSize="16dp"
+                        android:id="@+id/d_fnum"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#fff"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phone"
+                        android:layout_weight="3"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phone Number"
+                        android:layout_weight="1"
+                        android:textSize="16dp"
+                        android:id="@+id/d_phone"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#fff"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:layout_weight="3"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:layout_weight="1"
+                        android:textSize="16dp"
+                        android:id="@+id/d_addr"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#fff"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="id"
+        android:id="@+id/d_id"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addNeighbour"
+        android:visibility="gone"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:elevation="10dp"
+        android:src="@drawable/ic_add_circle_white_24dp"
+        android:layout_marginTop="10dp"
+        app:backgroundTint="#A4C639"
+        android:onClick="addNeighbour"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+
+</RelativeLayout>
+</ScrollView>

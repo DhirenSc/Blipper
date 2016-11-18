@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.nirbhay.blipper.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:orientation="vertical"
+    android:background="#C32026"
+    android:gravity="center"
+   >
+
+   <!--
+   FOR GIF BUZZER UNCOMMENT
+       <pl.droidsonroids.gif.GifTextView
+       android:layout_marginTop="25dp"
+       android:layout_width="160dp"
+       android:layout_height="160dp"
+       android:background="@drawable/emergency"
+       />
+
+    -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Click the below button if Emergency!"
+        android:id="@+id/textk"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="26dp"/>
+    <ImageButton
+        android:layout_marginTop="20dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/buzzer"
+        android:onClick="notify_NEIGHBOURS"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:text="Update Your Details"
+        android:layout_gravity="center"
+        android:background="@drawable/buttonbg2"
+        android:padding="15dp"
+        android:textColor="#C32026"
+        android:textSize="16dp"
+        android:onClick="updateP"
+        android:id="@+id/upd_btn"
+        android:elevation="8dp" />
+
+
+
+</LinearLayout>
