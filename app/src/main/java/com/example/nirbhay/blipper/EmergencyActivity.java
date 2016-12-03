@@ -12,18 +12,22 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by nirbhay on 11/18/16.
  */
 
 public class EmergencyActivity extends AppCompatActivity {
+    public static String LAT = "";
+    public static String LNG = "";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency);
         TextView myTextView2 = (TextView) findViewById(R.id.label_points);
         Typeface typeFace = Typeface.createFromAsset(getAssets(), "fonts/Pacifico.ttf");
         myTextView2.setTypeface(typeFace);
+
 
         Intent i =getIntent();
         if(i.hasExtra("emergency")){
@@ -59,7 +63,14 @@ public class EmergencyActivity extends AppCompatActivity {
 
         }
         if(i.hasExtra("emergency_id")){
-            new GetEmergencyDetails(this).execute(i.getStringExtra("emergency_id"));
+            String det[] = i.getStringExtra("emergency_id").split("#@#");
+            String detLoc[] = det[1].split("###");
+            EmergencyActivity.LAT = detLoc[0];
+            EmergencyActivity.LNG = detLoc[1];
+            new GetEmergencyDetails(this).execute(det[0]);
+
+
+
         }
 
 
@@ -73,5 +84,15 @@ public class EmergencyActivity extends AppCompatActivity {
             startActivity(a);
 
 
+    }
+    public void getLoc(View v){
+        if(EmergencyActivity.LAT.equals("") || EmergencyActivity.LNG.equals("") || EmergencyActivity.LAT.equals("LOC_NOT_AVAIL") || EmergencyActivity.LNG.equals("LOC_NOT_AVAIL") ){
+            Toast.makeText(this,"Location Not Available" ,Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Intent i = new Intent(EmergencyActivity.this, UserMapActivity.class);
+            i.putExtra("LocA", EmergencyActivity.LAT + "@@@@" + EmergencyActivity.LNG);
+            startActivity(i);
+        }
     }
 }

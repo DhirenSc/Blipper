@@ -9,12 +9,37 @@
         android:layout_height="wrap_content"
         app:cardElevation="5dp"
         android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/material_bg"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/viewLoc"
+                android:textColor="#fff"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:text="View Location "
+                android:backgroundTint="#c32026"
+                android:drawableRight="@drawable/ic_my_location_white_24dp"
+                android:background="@drawable/buttonbg2"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:layout_marginTop="205dp"
             android:padding="15dp">
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -28,7 +53,7 @@
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold|italic"
+                    android:textStyle="bold"
                     android:textColor="#C32026"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -55,7 +80,7 @@
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold|italic"
+                    android:textStyle="bold"
                     android:textColor="#C32026"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -81,7 +106,7 @@
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold|italic"
+                    android:textStyle="bold"
                     android:textColor="#C32026"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -108,7 +133,7 @@
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold|italic"
+                    android:textStyle="bold"
                     android:textColor="#C32026"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -134,7 +159,7 @@
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold|italic"
+                    android:textStyle="bold"
                     android:textColor="#C32026"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -161,7 +186,7 @@
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold|italic"
+                    android:textStyle="bold"
                     android:textColor="#C32026"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -187,7 +212,7 @@
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold|italic"
+                    android:textStyle="bold"
                     android:textColor="#C32026"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -200,7 +225,38 @@
                     android:paddingBottom="10dp"
                     android:textColor="#C32026"/>
 
+
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lat"
+                    android:layout_weight="3"
+                    android:textSize="0dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    android:textStyle="bold"
+                    android:id="@+id/textView8"
+                    android:textColor="#C32026"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lng"
+                    android:layout_weight="1"
+                    android:textSize="0dp"
+                    android:id="@+id/textView9"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#C32026"/>
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

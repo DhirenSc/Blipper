@@ -4,24 +4,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C32026">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Neighbours"
-        android:textStyle="bold"
-        android:id="@+id/label_points"
-        android:textColor="#fff"
-        android:gravity="center"
-        android:background="#C32026"
-        android:padding="10dp"
-        android:textSize="40dp"></TextView>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="#fff"
-        android:elevation="10dp"/>
+    android:background="#fff">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +27,7 @@
         android:layout_height="match_parent"
         android:id="@+id/list_neig"
         android:divider="@null"
-        android:background="#C32026"
+        android:background="#fff"
         android:dividerHeight="0dp">
 
     </ListView>

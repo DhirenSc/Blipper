@@ -9,11 +9,32 @@
     android:layout_height="wrap_content"
     app:cardElevation="5dp"
     android:layout_margin="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/friends_x"
+        >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username "
+            android:backgroundTint="#C32026"
+            android:textSize="16dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/buttonbg2"
+            android:drawableRight="@drawable/ic_person_white_24dp"
+            android:id="@+id/textView2"
+            android:padding="15dp"
+            android:textColor="#fff"/>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_marginTop="205dp"
         android:padding="15dp">
 
         <LinearLayout
@@ -28,7 +49,7 @@
                 android:textSize="16dp"
                 android:paddingLeft="10dp"
                 android:paddingBottom="10dp"
-                android:textStyle="bold|italic"
+                android:textStyle="bold"
                 android:textColor="#C32026"/>
             <TextView
                 android:layout_width="match_parent"
@@ -55,7 +76,7 @@
                 android:textSize="16dp"
                 android:paddingLeft="10dp"
                 android:paddingBottom="10dp"
-                android:textStyle="bold|italic"
+                android:textStyle="bold"
                 android:textColor="#C32026"/>
             <TextView
                 android:layout_width="match_parent"
@@ -69,32 +90,7 @@
                 android:textColor="#C32026"/>
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="UName"
-                android:layout_weight="3"
-                android:textSize="16dp"
-                android:paddingLeft="10dp"
-                android:paddingBottom="10dp"
-                android:textStyle="bold|italic"
-                android:textColor="#C32026"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Username"
-                android:layout_weight="1"
-                android:textSize="16dp"
-                android:id="@+id/textView2"
-                android:paddingLeft="10dp"
-                android:paddingBottom="10dp"
-                android:textColor="#C32026"/>
 
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -108,7 +104,7 @@
                 android:textSize="16dp"
                 android:paddingLeft="10dp"
                 android:paddingBottom="10dp"
-                android:textStyle="bold|italic"
+                android:textStyle="bold"
                 android:textColor="#C32026"/>
             <TextView
                 android:layout_width="match_parent"
@@ -134,7 +130,7 @@
                 android:textSize="16dp"
                 android:paddingLeft="10dp"
                 android:paddingBottom="10dp"
-                android:textStyle="bold|italic"
+                android:textStyle="bold"
                 android:textColor="#C32026"/>
             <TextView
                 android:layout_width="match_parent"
@@ -161,7 +157,7 @@
                 android:textSize="16dp"
                 android:paddingLeft="10dp"
                 android:paddingBottom="10dp"
-                android:textStyle="bold|italic"
+                android:textStyle="bold"
                 android:textColor="#C32026"/>
             <TextView
                 android:layout_width="match_parent"

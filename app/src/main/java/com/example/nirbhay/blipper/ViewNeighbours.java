@@ -44,9 +44,6 @@ public class ViewNeighbours extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_neighbours);
-        TextView myTextView2=(TextView)findViewById(R.id.label_points);
-        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Pacifico.ttf");
-        myTextView2.setTypeface(typeFace);
         sharedpreferences = getSharedPreferences("user_PREFERNCES", Context.MODE_PRIVATE);
         uidN = sharedpreferences.getString("user_name","USER_NA");
         getJSON();

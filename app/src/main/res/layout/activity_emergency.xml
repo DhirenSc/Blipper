@@ -172,6 +172,20 @@
                         android:textColor="#fff"/>
 
                 </LinearLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Get Last Location"
+                    android:layout_gravity="center"
+                    android:background="@drawable/buttonbg2"
+                    android:padding="15dp"
+                    android:textColor="#C32026"
+                    android:textSize="16dp"
+                    android:onClick="getLoc"
+                    android:id="@+id/upd_share"
+                    android:elevation="8dp" />
 
 
             </LinearLayout>
@@ -179,10 +193,7 @@
 
         </android.support.v7.widget.CardView>
 
+
     </LinearLayout>
-<ImageButton
-    android:layout_width="160dp"
-    android:layout_height="160dp"
-    android:layout_gravity="center"
-    android:background="@drawable/alarm"/>
+
 </LinearLayout>

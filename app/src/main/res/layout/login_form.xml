@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/LOGIN_MAIN"
+    android:background="@drawable/login_background">
+<!--
+<com.flaviofaria.kenburnsview.KenBurnsView
+    android:id="@+id/imgLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imagebgx"
+    >
+    </com.flaviofaria.kenburnsview.KenBurnsView>
+-->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C32026" >
+    >
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,82 +41,83 @@
 
     </LinearLayout>
 
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:id="@+id/xx"
+        android:layout_marginBottom="20dp"
+        >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:textSize="15dp"
+            android:textColor="#575C60"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#fff"
+            android:clickable="true"
+            android:onClick="signupPost"
+            android:text=" Sign Up "
+            />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:layout_above="@+id/xx"
+        android:layout_marginBottom="30dp"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        android:id="@+id/login_button"
+        android:background="#3181DA"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+        android:onClick="loginPost"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:textColorLink="#fff"
         android:layout_height="50dp"
         android:id="@+id/tusername"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textColor="#ffffff"
+        android:textColor="#B1B1B2"
+        android:drawableTint="#B1B1B2"
         android:hint="Username"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawablePadding="8dp"
         android:maxLines="1"
-        android:gravity="center"
         android:textColorHint="#fff"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/buttonbg"
+        android:layout_above="@+id/tpassword"
+        android:layout_marginTop="140dp"
+        android:drawableLeft="@drawable/ic_person_outline_white_24dp"
         android:theme="@style/MyEditTextTheme"/>
 
 
 
     <EditText
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
-        android:textColorLink="#fff"
         android:layout_height="50dp"
         android:id="@+id/tpassword"
-
+        android:layout_above="@+id/login_button"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="#B1B1B2"
+        android:drawableTint="#B1B1B2"
         android:hint="Password"
-        android:textColor="#ffffff"
-        android:gravity="center"
+        android:layout_marginBottom="30dp"
         android:textColorHint="#fff"
-        android:background="@drawable/buttonbg"
         android:theme="@style/MyEditTextTheme"
+        android:drawableLeft="@drawable/ic_lock_open_white_24dp"
         android:inputType="textPassword"
+        android:drawablePadding="8dp"
         android:ems="10"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200px"
-        android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonbg"
-        android:layout_weight="1"
-        android:text="Login"
-        android:id="@+id/login_button"
-
-        android:textColor="#fff"
-        android:layout_marginTop="20dp"
-        android:onClick="loginPost"
-
-
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonbg"
-        android:text="Sign Up"
-        android:id="@+id/signUp_button"
-        android:layout_weight="1"
-
-        android:textColor="#fff"
-        android:layout_marginTop="20dp"
-        android:onClick="signupPost"
-
-
-        />
-    </LinearLayout>
-
-
-
-</LinearLayout>
+</RelativeLayout>

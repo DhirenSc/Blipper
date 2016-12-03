@@ -1,5 +1,6 @@
 package com.example.nirbhay.blipper;
 
+import android.animation.Animator;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,9 +12,15 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
+import io.codetail.animation.ViewAnimationUtils;
 
 /**
  * Created by nirbhay on 11/17/16.
@@ -25,6 +32,11 @@ public class AddNeighbour extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_neighbour);
+
+        YoYo.with(Techniques.FadeIn)
+                .duration(1500)
+                .playOn(findViewById(R.id.RXLayout));
+
         TextView myTextView2=(TextView)findViewById(R.id.label_points);
         Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Pacifico.ttf");
         myTextView2.setTypeface(typeFace);
@@ -57,6 +69,9 @@ public class AddNeighbour extends AppCompatActivity{
 
             TextView uid = (TextView) findViewById(R.id.d_id);
             uid.setText(n_Details[5]);
+
+            View myView = findViewById(R.id.RXLayout);
+
 
         }
     }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/BaapLL"
-    android:background="#C32026">
+    android:background="@drawable/signup_background">
 
 
     <ScrollView
@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/scrollX"
         >
+
 
 
         <LinearLayout
@@ -25,94 +26,88 @@
             >
 
 
-
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="56dp">
+                android:layout_marginTop="30dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Blipper"
-                    android:textStyle="bold"
-                    android:id="@+id/label_points"
+                    android:text="Sign Up"
+                    android:id="@+id/label_signup"
                     android:textColor="#fff"
-                    android:gravity="center"
-                    android:textSize="60dp"></TextView>
+                    android:gravity="left"
+                    android:textSize="40dp"></TextView>
 
             </LinearLayout>
 
 
-
             <EditText
                 android:layout_width="match_parent"
-                android:textColorLink="#fff"
                 android:layout_height="50dp"
                 android:id="@+id/name_reg"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:textColor="#ffffff"
+                android:textColor="#B1B1B2"
                 android:hint="Username"
-                android:gravity="center"
+                android:drawablePadding="8dp"
+                android:maxLines="1"
                 android:textColorHint="#fff"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/buttonbg"
+                android:layout_above="@+id/phone_reg"
+                android:layout_marginTop="70dp"
+                android:drawableLeft="@drawable/ic_person_outline_white_24dp"
+                android:drawableTint="#B1B1B2"
                 android:theme="@style/MyEditTextTheme"/>
             <EditText
                 android:layout_width="match_parent"
-                android:textColorLink="#fff"
                 android:layout_height="50dp"
                 android:id="@+id/phone_reg"
-                android:layout_marginLeft="20dp"
+                android:textColor="#B1B1B2"
                 android:inputType="number"
-                android:layout_marginRight="20dp"
-                android:textColor="#ffffff"
                 android:hint="Phone Number"
-                android:gravity="center"
-                android:textColorHint="#fff"
+                android:drawablePadding="8dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/buttonbg"
+                android:maxLines="1"
+                android:textColorHint="#fff"
+                android:layout_above="@+id/reppassword_reg"
+                android:drawableLeft="@drawable/ic_smartphone_white_24dp"
+                android:drawableTint="#B1B1B2"
                 android:theme="@style/MyEditTextTheme"/>
 
 
 
             <EditText
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_width="match_parent"
-                android:textColorLink="#fff"
                 android:layout_height="50dp"
                 android:id="@+id/password_reg"
-
-                android:layout_marginTop="10dp"
+                android:drawablePadding="8dp"
                 android:hint="Password"
-                android:textColor="#ffffff"
-                android:gravity="center"
+                android:textColor="#B1B1B2"
                 android:textColorHint="#fff"
-                android:background="@drawable/buttonbg"
                 android:theme="@style/MyEditTextTheme"
+                android:drawableLeft="@drawable/ic_lock_open_white_24dp"
                 android:inputType="textPassword"
+                android:drawableTint="#B1B1B2"
+                android:layout_marginTop="10dp"
                 android:ems="10"/>
             <EditText
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_width="match_parent"
-                android:textColorLink="#fff"
                 android:layout_height="50dp"
                 android:id="@+id/reppassword_reg"
-
                 android:layout_marginTop="10dp"
+                android:drawablePadding="8dp"
                 android:hint="Repeat Password"
-                android:textColor="#ffffff"
-                android:gravity="center"
+                android:textColor="#B1B1B2"
                 android:textColorHint="#fff"
-                android:background="@drawable/buttonbg"
                 android:theme="@style/MyEditTextTheme"
+                android:drawableLeft="@drawable/ic_lock_open_white_24dp"
                 android:inputType="textPassword"
+                android:drawableTint="#B1B1B2"
                 android:ems="10"/>
 
             </LinearLayout>
@@ -120,14 +115,14 @@
 
     </ScrollView>
 
-
+       <!--
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/register_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:elevation="10dp"
             android:src="@drawable/ic_check_circle_white_24dp"
-            app:backgroundTint="#A4C639"
+            app:backgroundTint="#F73688"
             android:onClick="registerUser"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
@@ -135,6 +130,23 @@
             android:layout_marginBottom="16dp"
 
             />
+            -->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Join"
+        android:layout_above="@+id/xx"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="false"
+        android:layout_marginBottom="40dp"
+        android:textSize="16dp"
+        android:id="@+id/login_button"
+        android:background="#3181DA"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+        android:onClick="registerUser"/>
+
 
 
 

@@ -37,6 +37,8 @@ public class ViewEmergencies extends AppCompatActivity{
     public String[] n_ufno;
     public String[] n_ufname;
     public String[] n_uTime;
+    public String[] last_lat;
+    public String[] last_lng;
 
     ListView listView;
     public static String uidE="";
@@ -46,9 +48,6 @@ public class ViewEmergencies extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_emergencies);
-        TextView myTextView2=(TextView)findViewById(R.id.label_points);
-        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Pacifico.ttf");
-        myTextView2.setTypeface(typeFace);
         sharedpreferences = getSharedPreferences("user_PREFERNCES", Context.MODE_PRIVATE);
         uidE = sharedpreferences.getString("user_name","USER_NA");
         getJSON();
@@ -125,12 +124,14 @@ public class ViewEmergencies extends AppCompatActivity{
 
     }
 
+
+
     public void showData(){
 
 
 
         listView = (ListView) findViewById(R.id.list_emerg);
-        listView.setAdapter(new CustomAdapterEmergency(this, phone_no,n_unames,n_uid,n_uaddr,n_ufname,n_ufno,n_uTime));;
+        listView.setAdapter(new CustomAdapterEmergency(this, phone_no,n_unames,n_uid,n_uaddr,n_ufname,n_ufno,n_uTime, last_lat,last_lng));;
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -149,8 +150,6 @@ public class ViewEmergencies extends AppCompatActivity{
 
     private void parseJSON(String json){
         try {
-
-
             JSONArray jsonArray = new JSONArray(json);
             phone_no = new String[jsonArray.length()];
             n_unames = new String[jsonArray.length()];
@@ -159,6 +158,8 @@ public class ViewEmergencies extends AppCompatActivity{
             n_ufno = new String[jsonArray.length()];
             n_ufname = new String[jsonArray.length()];
             n_uTime = new String[jsonArray.length()];
+            last_lat =  new String[jsonArray.length()];
+            last_lng =  new String[jsonArray.length()];
             for(int i=0; i<jsonArray.length(); i++){
                 JSONObject k = jsonArray.getJSONObject(i);
                 phone_no[i] = getPhoneno(k);
@@ -168,6 +169,8 @@ public class ViewEmergencies extends AppCompatActivity{
                 n_ufno[i] = getFlatNo(k);
                 n_ufname[i] = getFullName(k);
                 n_uTime[i] = getTimeStamp(k);
+                last_lat[i] = getLastLat(k);
+                last_lng[i] = getLastLng(k);
 
 
             }
@@ -242,9 +245,23 @@ public class ViewEmergencies extends AppCompatActivity{
         }
         return x;
     }
-
-
-
-
+    private String getLastLat(JSONObject j){
+        String x = null;
+        try {
+            x = j.getString(Config2.TAG_LAT);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return x;
+    }
+    private String getLastLng(JSONObject j){
+        String x = null;
+        try {
+            x = j.getString(Config2.TAG_LNG);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return x;
+    }
 
 }

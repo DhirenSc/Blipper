@@ -5,6 +5,7 @@ package com.example.nirbhay.blipper;
 
 import android.app.AlertDialog;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.AsyncTask;
 
 import android.app.AlertDialog;
@@ -15,6 +16,10 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.github.johnpersano.supertoasts.library.Style;
+import com.github.johnpersano.supertoasts.library.SuperActivityToast;
+import com.github.johnpersano.supertoasts.library.utils.PaletteUtils;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -98,9 +103,13 @@ public class UpdateUserOnDevice  extends AsyncTask<String,Void,String> {
         if(result != null && !result.isEmpty()){
 
             if(result.trim().equals("Success")) {
-                Toast toast= Toast.makeText(this.context, "Successfully updated User!", Toast.LENGTH_SHORT);
-                toast.setMargin(150,150);
-                toast.show();
+                SuperActivityToast.create(this.context, new Style(), Style.TYPE_STANDARD)
+                        .setProgressBarColor(Color.WHITE)
+                        .setText("Successfully Updated User")
+                        .setDuration(Style.DURATION_MEDIUM)
+                        .setFrame(Style.FRAME_KITKAT)
+                        .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_LIGHT_BLUE))
+                        .setAnimations(Style.ANIMATIONS_SCALE).show();
 
             }
 
@@ -108,9 +117,13 @@ public class UpdateUserOnDevice  extends AsyncTask<String,Void,String> {
 
         }
         else{
-            Toast toast= Toast.makeText(this.context, "Unable to connect to the server!", Toast.LENGTH_SHORT);
-            toast.setMargin(150,150);
-            toast.show();
+            SuperActivityToast.create(this.context, new Style(), Style.TYPE_STANDARD)
+                    .setProgressBarColor(Color.WHITE)
+                    .setText("Unable to Update User On Device")
+                    .setDuration(Style.DURATION_MEDIUM)
+                    .setFrame(Style.FRAME_KITKAT)
+                    .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_RED))
+                    .setAnimations(Style.ANIMATIONS_SCALE).show();
         }
 
 

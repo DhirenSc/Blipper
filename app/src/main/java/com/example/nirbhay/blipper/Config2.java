@@ -14,7 +14,8 @@ public class Config2 {
     public static final String TAG_ADDRESS = "Address";
     public static final String TAG_USERNAME = "username";
     public static final String TAG_PHONENO = "phone_no";
-
+    public static final String TAG_LAT = "last_lat";
+    public static final String TAG_LNG = "last_lng";
     public static final String TAG_TIMESTAMP = "timestamp";
 
 

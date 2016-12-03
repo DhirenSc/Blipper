@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "698696097433",
+    "firebase_url": "https://blipper-c2380.firebaseio.com",
+    "project_id": "blipper-c2380",
+    "storage_bucket": "blipper-c2380.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698696097433:android:f1736357c1a2c03a",
+        "android_client_info": {
+          "package_name": "com.example.nirbhay.blipper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698696097433-ejhtpaifuvvgauq007ds8qlvc26v6b10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaYBiT9a_ptQ1ya2R8PjVxIfXA9eWpGvo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

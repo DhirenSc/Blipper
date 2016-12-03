@@ -13,11 +13,16 @@ import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.facebook.stetho.Stetho;
+import com.flaviofaria.kenburnsview.KenBurnsView;
+import com.flaviofaria.kenburnsview.Transition;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.HashMap;
+
 
 /**
  * Created by nirbhay on 11/1/16.
@@ -32,6 +37,7 @@ public class SplashScreen extends AppCompatActivity{
 
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         setContentView(R.layout.splash_screen);
         Stetho.initializeWithDefaults(this);
         FirebaseMessaging.getInstance().subscribeToTopic("test");
@@ -47,21 +53,49 @@ public class SplashScreen extends AppCompatActivity{
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/Pacifico.ttf");
         title.setTypeface(font);
 
+        YoYo.with(Techniques.RollIn)
+                .duration(3200)
+                .playOn(findViewById(R.id.label_points1));
+        /*
+        KenBurnsView kbv = (KenBurnsView) findViewById(R.id.imageK);
+        kbv.setTransitionListener(new KenBurnsView.TransitionListener() {
+            @Override
+            public void onTransitionStart(Transition transition) {
+
+            }
+
+            @Override
+            public void onTransitionEnd(Transition transition) {
+
+            }
+        });
+        */
+
+
 
 
         Thread timerThread = new Thread(){
             public void run(){
                 try{
-                    sleep(4501);
+                    sleep(6501);
+
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally{
 
                     user_name = sharedpreferences.getString("user_name","NIR");
 
+
                     if(user_name.equals("") || user_name.equals("NIR") || user_name.equals("LOGOUT") ){
-                        Intent intent = new Intent(SplashScreen.this, LoginActivity.class);
-                        startActivity(intent);
+                        /*
+                        if(user_name.equals("LOGOUT")){
+                            Intent intent = new Intent(SplashScreen.this, LoginActivity.class);
+                            startActivity(intent);
+                        }
+                        else {*/
+                            Intent intent = new Intent(SplashScreen.this, Walkthrough.class);
+                            startActivity(intent);
+                        /*}*/
                     }
                     else{
 

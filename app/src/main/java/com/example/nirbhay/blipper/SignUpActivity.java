@@ -28,10 +28,6 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_form);
 
-        TextView myTextView2=(TextView)findViewById(R.id.label_points);
-        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Pacifico.ttf");
-        myTextView2.setTypeface(typeFace);
-
 
     }
     @Override
@@ -44,6 +40,8 @@ public class SignUpActivity extends AppCompatActivity {
 
 
     public void registerUser(View view){
+
+
 
         EditText name = (EditText) findViewById(R.id.name_reg);
         String name_ = name.getText().toString();
