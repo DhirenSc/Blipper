@@ -6,11 +6,15 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseBooleanArray;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -44,6 +48,8 @@ public class ViewNeighbours extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_neighbours);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         sharedpreferences = getSharedPreferences("user_PREFERNCES", Context.MODE_PRIVATE);
         uidN = sharedpreferences.getString("user_name","USER_NA");
         getJSON();
@@ -54,6 +60,17 @@ public class ViewNeighbours extends AppCompatActivity{
         Intent intent = new Intent(ViewNeighbours.this, MainActivity.class);
         startActivity(intent);
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                Intent i = new Intent(ViewNeighbours.this, MainActivity.class);
+                startActivity(i);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
@@ -73,8 +90,6 @@ public class ViewNeighbours extends AppCompatActivity{
                 if(s.equals("0 results")){
                     TextView k = (TextView) findViewById(R.id.tvx);
                     k.setVisibility(View.VISIBLE);
-                    Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Pacifico.ttf");
-                    k.setTypeface(typeFace);
 
                 }
                 else {

@@ -9,6 +9,8 @@
             android:id="@+id/nav_home"
             android:title="Home"
             android:icon="@drawable/ic_add_alert_black_24dp"
+            android:checked="true"
+
             >
         </item>
     </group>

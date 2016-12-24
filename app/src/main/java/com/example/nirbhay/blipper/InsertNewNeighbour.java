@@ -5,6 +5,7 @@ package com.example.nirbhay.blipper;
 
 import android.app.AlertDialog;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.AsyncTask;
 
 import android.app.AlertDialog;
@@ -15,6 +16,10 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.github.johnpersano.supertoasts.library.Style;
+import com.github.johnpersano.supertoasts.library.SuperActivityToast;
+import com.github.johnpersano.supertoasts.library.utils.PaletteUtils;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -32,7 +37,6 @@ import java.net.URLEncoder;
 
 public class InsertNewNeighbour  extends AsyncTask<String,Void,String> {
     SharedPreferences sharedpreferences;
-    ProgressDialog am;
     private Context context;
     //flag 0 means get and 1 means post.(By default it is get.)
     public InsertNewNeighbour(Context context) {
@@ -42,11 +46,16 @@ public class InsertNewNeighbour  extends AsyncTask<String,Void,String> {
     }
 
     protected void onPreExecute(){
-        am = new ProgressDialog(this.context, AlertDialog.THEME_HOLO_DARK);
-        am.setTitle("Adding New Neighbour");
-        am.setMessage("Adding ... ");
-        am.show();
-        Log.e("onPreExecutive", "called" + am);
+        /*We are facing a problem here and also same username is being added as a neighbour*/
+        SuperActivityToast.create(this.context, new Style(), Style.TYPE_PROGRESS_BAR)
+                .setProgressBarColor(Color.WHITE)
+                .setText("Adding New Neighbour")
+                .setDuration(Style.DURATION_MEDIUM)
+                .setFrame(Style.FRAME_KITKAT)
+                .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_LIGHT_BLUE))
+                .setAnimations(Style.ANIMATIONS_SCALE).show();
+
+        Log.e("onPreExecutive", "called");
     }
 
     @Override
@@ -96,30 +105,40 @@ public class InsertNewNeighbour  extends AsyncTask<String,Void,String> {
 
     @Override
     protected void onPostExecute(String result){
-        am.dismiss();
+
 
         if(result != null && !result.isEmpty()){
 
             if(result.trim().equals("Success")) {
-                Toast toast= Toast.makeText(this.context, "New Neighbour Added!", Toast.LENGTH_SHORT);
-                toast.setMargin(150,150);
-                toast.show();
+
                 Intent intent = new Intent(this.context, MainActivity.class);
                 this.context.startActivity(intent);
+                SuperActivityToast.create(this.context, new Style(), Style.TYPE_STANDARD)
+                        .setText("New Neighbour Added")
+                        .setDuration(Style.DURATION_LONG)
+                        .setFrame(Style.FRAME_KITKAT)
+                        .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_LIGHT_GREEN))
+                        .setAnimations(Style.ANIMATIONS_SCALE).show();
             }
             if(result.trim().equals("Present")){
-                Toast toast= Toast.makeText(this.context, "This Neighbour Already Exist!", Toast.LENGTH_SHORT);
-                toast.setMargin(150,150);
-                toast.show();
+                SuperActivityToast.create(this.context, new Style(), Style.TYPE_STANDARD)
+                        .setText("This neighbour already exists")
+                        .setDuration(Style.DURATION_MEDIUM)
+                        .setFrame(Style.FRAME_KITKAT)
+                        .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_RED))
+                        .setAnimations(Style.ANIMATIONS_SCALE).show();
             }
 
 
 
         }
         else{
-            Toast toast= Toast.makeText(this.context, "Unable to connect to the server!", Toast.LENGTH_SHORT);
-            toast.setMargin(150,150);
-            toast.show();
+            SuperActivityToast.create(this.context, new Style(), Style.TYPE_STANDARD)
+                    .setText("Unable to connect to the server!")
+                    .setDuration(Style.DURATION_MEDIUM)
+                    .setFrame(Style.FRAME_KITKAT)
+                    .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_RED))
+                    .setAnimations(Style.ANIMATIONS_SCALE).show();
         }
 
 

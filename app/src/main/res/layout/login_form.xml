@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:text="Don't have an account?"
             android:textSize="15dp"
-            android:textColor="#575C60"/>
+            android:textColor="#B1B1B2"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -94,7 +94,7 @@
         android:layout_marginRight="16dp"
         android:drawablePadding="8dp"
         android:maxLines="1"
-        android:textColorHint="#fff"
+        android:textColorHint="#B1B1B2"
         android:layout_above="@+id/tpassword"
         android:layout_marginTop="140dp"
         android:drawableLeft="@drawable/ic_person_outline_white_24dp"
@@ -114,7 +114,7 @@
         android:drawableTint="#B1B1B2"
         android:hint="Password"
         android:layout_marginBottom="30dp"
-        android:textColorHint="#fff"
+        android:textColorHint="#B1B1B2"
         android:theme="@style/MyEditTextTheme"
         android:drawableLeft="@drawable/ic_lock_open_white_24dp"
         android:inputType="textPassword"

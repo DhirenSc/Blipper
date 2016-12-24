@@ -265,6 +265,7 @@ public class MainActivity extends AppCompatActivity
             editor.putString("user_name","LOGOUT");
             editor.commit();
             String token = sharedpreferences.getString("device_key_x","KEY_NA");
+            Log.e(token,"<-TO");
             new UpdateUserOnDevice(this).execute(token,"NONE_LOGGED_IN");
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
@@ -296,8 +297,10 @@ public class MainActivity extends AppCompatActivity
 
             longitude = gps.getLongitude();
             latitude = gps .getLatitude();
+            Log.e(latitude+"@@@",longitude+"");
             MainActivity.lat = Double.toString(latitude);
             MainActivity.lng = Double.toString(longitude);
+            Log.e(MainActivity.lat+"@@@",MainActivity.lng+"");
             SuperActivityToast.create(this, new Style(), Style.TYPE_PROGRESS_BAR)
                     .setProgressBarColor(Color.WHITE)
                     .setText("Sending Location to Neighbours")

@@ -5,58 +5,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C32026">
+    android:background="#4d545c">
 <ScrollView
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C32026">
+    android:background="#4d545c">
 
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C32026">
+    android:background="@drawable/signup_background">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="edit"
-        android:id="@+id/label_points"
-        android:textColor="#FFF"
-        android:gravity="center"
-        android:textSize="60dp"></TextView>
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="5dp"
-        app:cardBackgroundColor="#C32026"
-        android:id="@+id/viewDetails"
-        android:visibility="visible"
-
-
-        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="20dp"
             >
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="#3181dA">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
-                    android:background="@drawable/buttonbg2"
                     android:padding="20dp"
                     android:layout_weight="2"
-                    android:textColor="#C32026"
+                    android:textColor="#fff"
                     android:textSize="22dp"
                     android:gravity="center"
                     android:text="Uid"
@@ -69,86 +47,87 @@
                     android:gravity="center"
                     android:elevation="10dp"
                     android:textStyle="bold"
-                    android:background="@drawable/buttonbg2"
                     android:padding="20dp"
                     android:layout_weight="1"
                     android:id="@+id/p_uname"
-                    android:textColor="#C32026"
+                    android:textColor="#fff"
                     android:textSize="22dp"
                     android:text="User Name"/>
             </LinearLayout>
+
             <EditText
                 android:layout_width="match_parent"
-                android:textColorLink="#fff"
                 android:layout_height="50dp"
                 android:id="@+id/fname"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:textColor="#ffffff"
+                android:textColor="#B1B1B2"
                 android:hint="Name"
-                android:gravity="center"
+                android:drawablePadding="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxLines="1"
                 android:textColorHint="#fff"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/buttonbg"
+                android:layout_above="@+id/phone_reg"
+                android:layout_marginTop="60dp"
+                android:drawableLeft="@drawable/ic_person_outline_white_24dp"
+                android:drawableTint="#B1B1B2"
                 android:theme="@style/MyEditTextTheme"/>
             <EditText
                 android:layout_width="match_parent"
-                android:textColorLink="#fff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_height="50dp"
                 android:id="@+id/fphone"
-                android:layout_marginLeft="20dp"
-                android:inputType="number"
-                android:layout_marginRight="20dp"
-                android:textColor="#ffffff"
+                android:textColor="#B1B1B2"
                 android:hint="Phone Number"
-                android:gravity="center"
+                android:drawablePadding="8dp"
+                android:maxLines="1"
                 android:textColorHint="#fff"
+                android:layout_above="@+id/phone_reg"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/buttonbg"
+                android:drawableLeft="@drawable/ic_smartphone_white_24dp"
+                android:drawableTint="#B1B1B2"
                 android:theme="@style/MyEditTextTheme"/>
-
-
-
             <EditText
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_width="match_parent"
-                android:textColorLink="#fff"
                 android:layout_height="50dp"
                 android:id="@+id/flatnumber"
-
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#B1B1B2"
                 android:hint="Flat Number"
-                android:textColor="#ffffff"
-                android:gravity="center"
+                android:drawablePadding="8dp"
+                android:maxLines="1"
                 android:textColorHint="#fff"
-                android:background="@drawable/buttonbg"
-                android:theme="@style/MyEditTextTheme"
-                android:inputType="number"
-                android:ems="10"/>
+                android:layout_above="@+id/phone_reg"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_add_alert_white_24dp"
+                android:drawableTint="#B1B1B2"
+                android:theme="@style/MyEditTextTheme"/>
             <EditText
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_width="match_parent"
-                android:textColorLink="#fff"
                 android:layout_height="wrap_content"
                 android:id="@+id/faddress"
-                android:textSize="16dp"
-                android:layout_marginTop="10dp"
+                android:textColor="#B1B1B2"
                 android:hint="Address"
-                android:textColor="#ffffff"
-                android:padding="10dp"
-                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:drawablePadding="8dp"
+                android:lines="8"
+                android:minLines="6"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:textColorHint="#fff"
-                android:background="@drawable/buttonbg"
-                android:theme="@style/MyEditTextTheme"
-                android:ems="10"/>
+                android:layout_above="@+id/phone_reg"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_home_white_24dp"
+                android:drawableTint="#B1B1B2"
+                android:theme="@style/MyEditTextTheme"/>
 
 
         </LinearLayout>
 
 
-    </android.support.v7.widget.CardView>
 
 
 </LinearLayout>
@@ -159,7 +138,7 @@
         android:layout_height="wrap_content"
         app:elevation="10dp"
         android:src="@drawable/ic_check_circle_white_24dp"
-        app:backgroundTint="#A4C639"
+        app:backgroundTint="#3181da"
         android:onClick="updateProfile"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"

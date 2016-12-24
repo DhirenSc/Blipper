@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
@@ -21,9 +22,10 @@ public class UpdateProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.update_details);
-        TextView myTextView2 = (TextView) findViewById(R.id.label_points);
-        Typeface typeFace = Typeface.createFromAsset(getAssets(), "fonts/Pacifico.ttf");
-        myTextView2.setTypeface(typeFace);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         Intent i = getIntent();
 
         if(i.hasExtra("user_det")){
@@ -53,6 +55,13 @@ public class UpdateProfile extends AppCompatActivity {
 
 
         }
+
+    }
+    @Override
+    public void onBackPressed() {
+
+        Intent intent = new Intent(UpdateProfile.this, MainActivity.class);
+        startActivity(intent);
 
     }
     public void updateProfile(View v){
@@ -96,11 +105,5 @@ public class UpdateProfile extends AppCompatActivity {
 
 
     }
-    @Override
-    public void onBackPressed() {
 
-        Intent intent = new Intent(UpdateProfile.this, MainActivity.class);
-        startActivity(intent);
-
-    }
 }

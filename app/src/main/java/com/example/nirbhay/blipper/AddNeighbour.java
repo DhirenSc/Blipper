@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -19,6 +20,9 @@ import android.widget.Toast;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.github.johnpersano.supertoasts.library.Style;
+import com.github.johnpersano.supertoasts.library.SuperActivityToast;
+import com.github.johnpersano.supertoasts.library.utils.PaletteUtils;
 
 import io.codetail.animation.ViewAnimationUtils;
 
@@ -34,12 +38,10 @@ public class AddNeighbour extends AppCompatActivity{
         setContentView(R.layout.add_neighbour);
 
         YoYo.with(Techniques.FadeIn)
-                .duration(1500)
+                .duration(800)
                 .playOn(findViewById(R.id.RXLayout));
 
-        TextView myTextView2=(TextView)findViewById(R.id.label_points);
-        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Pacifico.ttf");
-        myTextView2.setTypeface(typeFace);
+
         Intent i = getIntent();
 
         if(i.hasExtra("neigh")){
@@ -79,9 +81,12 @@ public class AddNeighbour extends AppCompatActivity{
         EditText sData = (EditText) findViewById(R.id.searchquery);
         String username = sData.getText().toString();
         if(username.equals("")){
-            Toast toast= Toast.makeText(this, "SearchBox is empty!", Toast.LENGTH_SHORT);
-            toast.setMargin(150,150);
-            toast.show();
+            SuperActivityToast.create(this, new Style(), Style.TYPE_STANDARD)
+                    .setText("Searchbox is Empty")
+                    .setDuration(Style.DURATION_MEDIUM)
+                    .setFrame(Style.FRAME_KITKAT)
+                    .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_RED))
+                    .setAnimations(Style.ANIMATIONS_SCALE).show();
         }
         else{
             new GetNeighbourDetails(this).execute(username);
@@ -96,9 +101,12 @@ public class AddNeighbour extends AppCompatActivity{
         sharedpreferences = getSharedPreferences("user_PREFERNCES", Context.MODE_PRIVATE);
         String cur_uid = sharedpreferences.getString("user_name","USER_NA");
         if(cur_uid.equals(neig_id)){
-            Toast toast= Toast.makeText(this, "Cannot Add yourself as neighbour!", Toast.LENGTH_SHORT);
-            toast.setMargin(150,150);
-            toast.show();
+            SuperActivityToast.create(this, new Style(), Style.TYPE_STANDARD)
+                    .setText("Cannot add yourself as a neighbour")
+                    .setDuration(Style.DURATION_MEDIUM)
+                    .setFrame(Style.FRAME_KITKAT)
+                    .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_RED))
+                    .setAnimations(Style.ANIMATIONS_SCALE).show();
         }
         else {
             new InsertNewNeighbour(this).execute(cur_uid, neig_id, n_uname);

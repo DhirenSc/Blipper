@@ -16,6 +16,10 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.johnpersano.supertoasts.library.Style;
+import com.github.johnpersano.supertoasts.library.SuperActivityToast;
+import com.github.johnpersano.supertoasts.library.utils.PaletteUtils;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -42,11 +46,13 @@ public class GetNeighbourDetails  extends AsyncTask<String,Void,String> {
     }
 
     protected void onPreExecute(){
-        am = new ProgressDialog(this.context, AlertDialog.THEME_HOLO_DARK);
-        am.setTitle("Searching For User");
-        am.setMessage("Searching ... ");
-        am.show();
-        Log.e("onPreExecutive", "called" + am);
+        SuperActivityToast.create(this.context, new Style(), Style.TYPE_PROGRESS_BAR)
+                .setText("Retrieving User Details")
+                .setDuration(Style.DURATION_MEDIUM)
+                .setFrame(Style.FRAME_KITKAT)
+                .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_LIGHT_BLUE))
+                .setAnimations(Style.ANIMATIONS_SCALE).show();
+        Log.e("onPreExecutive", "called");
     }
 
     @Override
@@ -90,7 +96,6 @@ public class GetNeighbourDetails  extends AsyncTask<String,Void,String> {
 
     @Override
     protected void onPostExecute(String result){
-        am.dismiss();
         String[] results;
 
         if(result != null && !result.isEmpty()){
@@ -101,24 +106,35 @@ public class GetNeighbourDetails  extends AsyncTask<String,Void,String> {
                 Intent intent = new Intent(this.context, AddNeighbour.class);
                 intent.putExtra("neigh",results[1]);
                 this.context.startActivity(intent);
-                Toast toast= Toast.makeText(this.context, "Search Result", Toast.LENGTH_SHORT);
-                toast.setMargin(150,150);
-                toast.show();
+                SuperActivityToast.create(this.context, new Style(), Style.TYPE_STANDARD)
+                        .setText("User Details")
+                        .setDuration(Style.DURATION_MEDIUM)
+                        .setFrame(Style.FRAME_KITKAT)
+                        .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_LIGHT_BLUE))
+                        .setAnimations(Style.ANIMATIONS_SCALE).show();
             }
             else{
-                Toast toast= Toast.makeText(this.context, "There is no such username, check for a spell error!", Toast.LENGTH_SHORT);
-                toast.setMargin(150,150);
-                toast.show();
+                SuperActivityToast.create(this.context, new Style(), Style.TYPE_STANDARD)
+                        .setText("There is no such username!")
+                        .setDuration(Style.DURATION_MEDIUM)
+                        .setFrame(Style.FRAME_KITKAT)
+                        .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_RED))
+                        .setAnimations(Style.ANIMATIONS_SCALE).show();
             }
 
 
 
         }
         else{
-            Toast toast= Toast.makeText(this.context, "Unable to connect to the server!", Toast.LENGTH_SHORT);
-            toast.setMargin(150,150);
-            toast.show();
+            SuperActivityToast.create(this.context, new Style(), Style.TYPE_STANDARD)
+                    .setText("Unable to connect to the server!")
+                    .setDuration(Style.DURATION_MEDIUM)
+                    .setFrame(Style.FRAME_KITKAT)
+                    .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_RED))
+                    .setAnimations(Style.ANIMATIONS_SCALE).show();
+
         }
+
 
 
 

@@ -1,87 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="15dp"
+    android:background="#4d545c"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+   >
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="5dp"
-        android:layout_margin="10dp">
-        <LinearLayout
+        android:id="@+id/holderback2"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp">
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="@drawable/material_bg"
+            android:background="#3181DA"
+            android:orientation="vertical"
             >
-            <Button
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/login_background"
+                android:id="@+id/MapImage"/>
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="95dp"
+                android:padding="20dp"
+                android:id="@+id/DummyImage"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:background="@drawable/malez"/>
+            <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:id="@+id/viewLoc"
                 android:textColor="#fff"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="5dp"
-                android:gravity="center"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="5dp"
-                android:text="View Location "
-                android:backgroundTint="#c32026"
-                android:drawableRight="@drawable/ic_my_location_white_24dp"
-                android:background="@drawable/buttonbg2"/>
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                app:backgroundTint="#3181DA"
+                android:src="@drawable/ic_my_location_white_24dp"
+                />
 
-        </LinearLayout>
-
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/holderback1"
+        android:layout_marginTop="205dp"
+        app:cardElevation="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="visible">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginTop="205dp"
             android:padding="15dp">
 
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Name"
-                    android:layout_weight="3"
-                    android:textSize="16dp"
-                    android:paddingLeft="10dp"
-                    android:paddingBottom="10dp"
-                    android:textStyle="bold"
-                    android:textColor="#C32026"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Full Name"
-                    android:layout_weight="1"
-                    android:textSize="16dp"
-                    android:id="@+id/textView4"
-                    android:paddingLeft="10dp"
-                    android:paddingBottom="10dp"
-                    android:textColor="#C32026"/>
-
-            </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Id"
+                    android:layout_weight="2"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#3181da"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
                     android:layout_weight="3"
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold"
-                    android:textColor="#C32026"/>
+                    android:textColor="#3181DA"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -91,7 +101,7 @@
                     android:id="@+id/textView3"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textColor="#C32026"/>
+                    android:textColor="#3181da"/>
 
             </LinearLayout>
             <LinearLayout
@@ -101,13 +111,22 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="UName"
+                    android:text="Username"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    android:textSize="16dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#3181da"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
                     android:layout_weight="3"
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold"
-                    android:textColor="#C32026"/>
+                    android:textColor="#3181DA"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -117,7 +136,7 @@
                     android:id="@+id/textView2"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textColor="#C32026"/>
+                    android:textColor="#3181da"/>
 
             </LinearLayout>
 
@@ -129,12 +148,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Contact"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    android:textSize="16dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#3181da"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
                     android:layout_weight="3"
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold"
-                    android:textColor="#C32026"/>
+                    android:textColor="#3181DA"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -144,7 +172,7 @@
                     android:id="@+id/textView1"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textColor="#C32026"/>
+                    android:textColor="#3181da"/>
 
             </LinearLayout>
             <LinearLayout
@@ -155,12 +183,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Flat No"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    android:textSize="16dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#3181da"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
                     android:layout_weight="3"
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold"
-                    android:textColor="#C32026"/>
+                    android:textColor="#3181DA"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -170,7 +207,7 @@
                     android:id="@+id/textView5"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textColor="#C32026"/>
+                    android:textColor="#3181da"/>
 
             </LinearLayout>
 
@@ -182,12 +219,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Address"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    android:textSize="16dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#3181da"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
                     android:layout_weight="3"
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold"
-                    android:textColor="#C32026"/>
+                    android:textColor="#3181DA"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -197,7 +243,7 @@
                     android:id="@+id/textView6"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textColor="#C32026"/>
+                    android:textColor="#3181da"/>
 
             </LinearLayout>
             <LinearLayout
@@ -207,23 +253,33 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Date and Time"
+                    android:text="Date"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    android:textSize="16dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#3181da"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
                     android:layout_weight="3"
                     android:textSize="16dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
-                    android:textStyle="bold"
-                    android:textColor="#C32026"/>
+                    android:textColor="#3181DA"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Date and Time"
+                    android:text="When and Where"
                     android:layout_weight="1"
                     android:textSize="16dp"
                     android:id="@+id/textView7"
                     android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:paddingBottom="10dp"
-                    android:textColor="#C32026"/>
+                    android:textColor="#3181da"/>
 
 
             </LinearLayout>
@@ -261,8 +317,53 @@
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="205dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="#fff"
+        android:paddingRight="10dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:id="@+id/holderfront"
+        android:visibility="visible"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="18dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:background="#3181DA"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/male"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="20dp"
+                android:id="@+id/textView4"
+                android:textColor="#fff"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
 
 
 
-</LinearLayout>
+</FrameLayout>

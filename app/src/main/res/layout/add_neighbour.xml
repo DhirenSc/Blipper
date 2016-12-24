@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#C32026"
-    android:id="@+id/RXLayout">
 
-<RelativeLayout
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C32026"
-    android:id="@+id/RLayout">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/signup_background"
+    android:id="@+id/RXLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 
 
@@ -20,109 +15,116 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
+        android:id="@+id/LLM"
         android:layout_marginTop="15dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Add a Neighbour"
-            android:id="@+id/label_points"
-            android:textColor="#FFF"
-            android:gravity="center"
-            android:textSize="40dp"></TextView>
 
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:orientation="horizontal">
         <EditText
-            android:layout_width="match_parent"
-            android:textColorLink="#fff"
-            android:layout_height="50dp"
-            android:id="@+id/searchquery"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:textColor="#ffffff"
-            android:hint="Enter a username ..."
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
             android:maxLines="1"
-            android:gravity="center"
-            android:textColorHint="#fff"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/buttonbg"
-            android:theme="@style/MyEditTextTheme"/>
+            android:textColorLink="#fff"
+            android:layout_height="match_parent"
+            android:id="@+id/searchquery"
+            android:textColor="#B1B1B2"
+            android:gravity="left"
+            android:drawableLeft="@drawable/ic_person_add_white_24dp"
+            android:drawableTint="#B1B1B2"
+            android:drawablePadding="12dp"
+            android:hint="Enter a Username"
+            android:textColorHint="#B1B1B2"
+            android:theme="@style/MyEditTextTheme"
+            />
+
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/search_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:elevation="10dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
             android:src="@drawable/ic_search_white_24dp"
-            android:layout_marginTop="10dp"
-            app:backgroundTint="#A4C639"
+            app:backgroundTint="#3181DA"
             android:onClick="goSearchUser"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="16dp"
 
 
             />
+       </LinearLayout>
+    </LinearLayout>
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             app:cardCornerRadius="5dp"
             app:cardElevation="5dp"
-            app:cardBackgroundColor="#C32026"
+            app:cardBackgroundColor="#fff"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"
             android:id="@+id/viewDetails"
             android:visibility="gone"
+            android:layout_below="@+id/LLM"
 
             >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-                <TextView
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Neighbour Details"
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textStyle="bold"
-                    android:textColor="#fff"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:background="#3181DA"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/male"/>
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Name"
-                        android:layout_weight="3"
-                        android:textSize="16dp"
-                        android:paddingLeft="10dp"
-                        android:paddingBottom="10dp"
-                        android:textColor="#fff"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Name"
-                        android:layout_weight="1"
-                        android:textSize="16dp"
+                        android:textSize="20dp"
                         android:id="@+id/d_name"
-                        android:paddingLeft="10dp"
-                        android:paddingBottom="10dp"
-                        android:textColor="#fff"/>
+                        android:textColor="#fff"
+                        android:layout_marginTop="10dp"/>
+                    </LinearLayout>
 
-                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Uname"
+                        android:text="Username"
+                        android:layout_weight="2"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#3181DA"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=":"
                         android:layout_weight="3"
                         android:textSize="16dp"
                         android:paddingLeft="10dp"
                         android:paddingBottom="10dp"
-                        android:textColor="#fff"/>
+                        android:textColor="#3181DA"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -132,7 +134,7 @@
                         android:id="@+id/d_uname"
                         android:paddingLeft="10dp"
                         android:paddingBottom="10dp"
-                        android:textColor="#fff"/>
+                        android:textColor="#3181DA"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -143,11 +145,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Flat Number"
+                        android:layout_weight="2"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#3181DA"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=":"
                         android:layout_weight="3"
                         android:textSize="16dp"
                         android:paddingLeft="10dp"
                         android:paddingBottom="10dp"
-                        android:textColor="#fff"/>
+                        android:textColor="#3181DA"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -157,7 +168,7 @@
                         android:id="@+id/d_fnum"
                         android:paddingLeft="10dp"
                         android:paddingBottom="10dp"
-                        android:textColor="#fff"/>
+                        android:textColor="#3181DA"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -168,11 +179,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Phone"
+                        android:layout_weight="2"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#3181DA"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=":"
                         android:layout_weight="3"
                         android:textSize="16dp"
                         android:paddingLeft="10dp"
                         android:paddingBottom="10dp"
-                        android:textColor="#fff"/>
+                        android:textColor="#3181DA"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -182,7 +202,7 @@
                         android:id="@+id/d_phone"
                         android:paddingLeft="10dp"
                         android:paddingBottom="10dp"
-                        android:textColor="#fff"/>
+                        android:textColor="#3181DA"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -193,11 +213,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Address"
+                        android:layout_weight="2"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#3181DA"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=":"
                         android:layout_weight="3"
                         android:textSize="16dp"
                         android:paddingLeft="10dp"
                         android:paddingBottom="10dp"
-                        android:textColor="#fff"/>
+                        android:textColor="#3181DA"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -205,9 +234,10 @@
                         android:layout_weight="1"
                         android:textSize="16dp"
                         android:id="@+id/d_addr"
+                        android:paddingRight="10dp"
                         android:paddingLeft="10dp"
                         android:paddingBottom="10dp"
-                        android:textColor="#fff"/>
+                        android:textColor="#3181DA"/>
 
                 </LinearLayout>
 
@@ -217,7 +247,7 @@
 
         </android.support.v7.widget.CardView>
 
-    </LinearLayout>
+
     <TextView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -227,20 +257,18 @@
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/addNeighbour"
         android:visibility="gone"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:elevation="10dp"
-        android:src="@drawable/ic_add_circle_white_24dp"
-        android:layout_marginTop="10dp"
-        app:backgroundTint="#A4C639"
+        android:src="@drawable/addf"
+        app:backgroundTint="#fff"
         android:onClick="addNeighbour"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="6dp"
+        android:layout_alignTop="@+id/viewDetails"
         />
 
 
 </RelativeLayout>
 
-</ScrollView>

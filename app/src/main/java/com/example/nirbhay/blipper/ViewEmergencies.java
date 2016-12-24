@@ -6,10 +6,12 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseBooleanArray;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -48,6 +50,8 @@ public class ViewEmergencies extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_emergencies);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         sharedpreferences = getSharedPreferences("user_PREFERNCES", Context.MODE_PRIVATE);
         uidE = sharedpreferences.getString("user_name","USER_NA");
         getJSON();
@@ -58,6 +62,17 @@ public class ViewEmergencies extends AppCompatActivity{
         Intent intent = new Intent(ViewEmergencies.this, MainActivity.class);
         startActivity(intent);
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                Intent i = new Intent(ViewEmergencies.this, MainActivity.class);
+                startActivity(i);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
@@ -77,8 +92,6 @@ public class ViewEmergencies extends AppCompatActivity{
                 if(s.equals("0 results")){
                     TextView k = (TextView) findViewById(R.id.tvx);
                     k.setVisibility(View.VISIBLE);
-                    Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Pacifico.ttf");
-                    k.setTypeface(typeFace);
 
                 }
                 else {
