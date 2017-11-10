@@ -4,3 +4,6 @@ Blipper is an emergency assistant Android application. It is designed for the pe
 
 Screenshots: 
 
+![Alt text](https://drive.google.com/open?id=18aNBJOAXEGHAMlSaOWHXTDJ1OfWkAXeG "Blipper Cover")
+
+
