@@ -4,6 +4,15 @@ Blipper is an emergency assistant Android application. It is designed for the pe
 
 Screenshots: 
 
-![Alt text](https://drive.google.com/open?id=18aNBJOAXEGHAMlSaOWHXTDJ1OfWkAXeG "Blipper Cover")
+![Blipper Cover Photo](https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183714.jpg "Blipper Cover")
+
+![Blipper Info 1  Photo](https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183722.jpg "Blipper Info")
+
+![Blipper Info 2 Photo](https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183726.jpg "Blipper Info")
+
+![Blipper Info 3 Photo](https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183728.jpg "Blipper Info")
+
+![Blipper Info 4 Photo](https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183731.jpg "Blipper Info")
+
 
 
