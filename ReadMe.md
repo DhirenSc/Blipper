@@ -4,21 +4,16 @@ Blipper is an emergency assistant Android application. It is designed for the pe
 
 Screenshots: 
 
-Blipper Cover Photo:
 
-<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183714.jpg" alt="Blipper Cover Photo" height="500" /><img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183722.jpg" alt="Blipper Info Photo 1" height="500" />
+<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183714.jpg" alt="Blipper Cover Photo" height="500" /><img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183722.jpg" alt="Blipper Info Photo 1" height="500" /><img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183726.jpg" alt="Blipper Info Photo 2" height="500" />
 
-About Blipper Photo 2:
+<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183728.jpg" alt="Blipper Info Photo 3" height="500" /><img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183731.jpg" alt="Blipper Info Photo 4" height="500" /><img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20170407-005518.jpg" alt="Blipper SignUp Photo" height="500" />
 
-<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183726.jpg" alt="Blipper Info Photo 2" height="500" />
+<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20170407-005226.jpg" alt="Blipper Home Screen" height="500" /><img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20170407-005707.jpg" alt="Blipper Naviagtion" height="500" /><img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20170407-005323.jpg" alt="Add a Neighbour" height="500" />>
 
-About Blipper Photo 3:
+<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20170407-005335.jpg" alt="Neighbours" height="500" /<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20170407-005338.jpg" alt="Neighbour Details" height="500" /><img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20170407-005715.jpg" alt="Emergencies" height="500" />
 
-<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183728.jpg" alt="Blipper Info Photo 3" height="500" />
-
-About Blipper Photo 4:
-
-<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183731.jpg" alt="Blipper Info Photo 4" height="500" />
+<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20170407-005719.jpg" alt="Emergencies Details" height="500" /><img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20170407-005730.jpg" alt="Emergencies Location" height="500" /><img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20170407-005800.jpg" alt="Emergencies Location Track" height="500" />
 
 
 
