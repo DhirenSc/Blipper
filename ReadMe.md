@@ -6,11 +6,7 @@ Screenshots:
 
 Blipper Cover Photo:
 
-<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183714.jpg" alt="Blipper Cover Photo" height="500" />
-
-About Blipper Photo 1:
-
-<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183722.jpg" alt="Blipper Info Photo 1" height="500" />
+<img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183714.jpg" alt="Blipper Cover Photo" height="500" /><img src="https://github.com/nirbhayph/Blipper/blob/master/app/src/main/res/raw/Screenshot_20171110-183722.jpg" alt="Blipper Info Photo 1" height="500" />
 
 About Blipper Photo 2:
 
